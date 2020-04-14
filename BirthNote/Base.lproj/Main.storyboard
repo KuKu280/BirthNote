@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="br8-6c-XRS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Count Down-->
+        <scene sceneID="l2h-47-5qD">
+            <objects>
+                <viewController id="2dy-q3-3EQ" customClass="SecondVC" customModule="BirthNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uY8-tz-x66">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sagar-patil-8UcNYpynFLU-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="roN-Rb-InN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="wPL-ff-Rxw">
+                                <rect key="frame" x="0.0" y="144" width="414" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.83921568629999999" green="0.8980392157" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00Days:00Hours:00Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGI-TW-byZ">
+                                <rect key="frame" x="79" y="434.5" width="256.5" height="27.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fot-YL-c8m">
+                                <rect key="frame" x="132" y="512" width="150" height="55"/>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.2901960784" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9y3-8s-nlP"/>
+                                    <constraint firstAttribute="height" constant="55" id="ler-vj-XPP"/>
+                                </constraints>
+                                <state key="normal" title="CountDown">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="countDown:" destination="2dy-q3-3EQ" eventType="touchUpInside" id="snK-2t-2oG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jGI-TW-byZ" firstAttribute="centerY" secondItem="uY8-tz-x66" secondAttribute="centerY" id="09e-A0-O4F"/>
+                            <constraint firstItem="Fot-YL-c8m" firstAttribute="centerX" secondItem="uY8-tz-x66" secondAttribute="centerX" id="2ft-mg-dMU"/>
+                            <constraint firstItem="wPL-ff-Rxw" firstAttribute="leading" secondItem="8JW-Es-F4X" secondAttribute="leading" id="9zB-lD-HZA"/>
+                            <constraint firstItem="jGI-TW-byZ" firstAttribute="centerX" secondItem="uY8-tz-x66" secondAttribute="centerX" id="BNz-h0-n9V"/>
+                            <constraint firstItem="roN-Rb-InN" firstAttribute="trailing" secondItem="8JW-Es-F4X" secondAttribute="trailing" id="H9J-py-fDn"/>
+                            <constraint firstItem="wPL-ff-Rxw" firstAttribute="top" secondItem="8JW-Es-F4X" secondAttribute="top" constant="100" id="RZb-ns-sGg"/>
+                            <constraint firstItem="roN-Rb-InN" firstAttribute="bottom" secondItem="8JW-Es-F4X" secondAttribute="bottom" id="UeS-ur-ZPf"/>
+                            <constraint firstItem="Fot-YL-c8m" firstAttribute="top" secondItem="jGI-TW-byZ" secondAttribute="bottom" constant="50" id="m3T-XD-ICi"/>
+                            <constraint firstItem="roN-Rb-InN" firstAttribute="top" secondItem="uY8-tz-x66" secondAttribute="top" id="mTX-t0-QqV"/>
+                            <constraint firstItem="8JW-Es-F4X" firstAttribute="trailing" secondItem="wPL-ff-Rxw" secondAttribute="trailing" id="mg8-FM-vNp"/>
+                            <constraint firstItem="roN-Rb-InN" firstAttribute="leading" secondItem="8JW-Es-F4X" secondAttribute="leading" id="qEe-Bb-ZqB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8JW-Es-F4X"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Count Down" image="helm" catalog="system" id="yWZ-za-ENm"/>
+                    <navigationItem key="navigationItem" id="RvA-PZ-frq"/>
+                    <connections>
+                        <outlet property="datePicker" destination="wPL-ff-Rxw" id="scp-tj-NnC"/>
+                        <outlet property="tapButton" destination="Fot-YL-c8m" id="xRJ-E8-9UZ"/>
+                        <outlet property="textLabel" destination="jGI-TW-byZ" id="811-ma-f2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiM-MT-foE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="844"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ueF-TB-lLv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="br8-6c-XRS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wfc-y2-tCw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.23137254900000001" green="0.26274509800000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.96862745100000003" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="T6j-D6-QJR" kind="relationship" relationship="viewControllers" id="HOf-rZ-rDf"/>
+                        <segue destination="2dy-q3-3EQ" kind="relationship" relationship="viewControllers" id="54h-OJ-HfI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7H-pb-L2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="553"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="vDa-oA-6z2">
+            <objects>
+                <tableViewController id="T6j-D6-QJR" customClass="FirstVC" customModule="BirthNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hh8-nd-8nb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" largeTitles="YES" id="X5f-7d-qKJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.093696489729999999" green="0.1572934503" blue="0.3436697346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="Birthday Note Taker" largeTitleDisplayMode="always" id="Zb8-pW-ehy">
+                                    <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="QR1-zu-wRq">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="addNote:" destination="T6j-D6-QJR" id="wX7-Xy-3i1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qxq-rm-dZc">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qxq-rm-dZc" id="5mB-Q3-cjG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T6j-D6-QJR" id="Wnx-dk-Qdc"/>
+                            <outlet property="delegate" destination="T6j-D6-QJR" id="EPg-kj-gRd"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="square.and.pencil" catalog="system" id="BzH-9N-bZu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n12-fx-bMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="177"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="helm" catalog="system" width="64" height="60"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="sagar-patil-8UcNYpynFLU-unsplash" width="4125" height="2768"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+    </resources>
+</document>

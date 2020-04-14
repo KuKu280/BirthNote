@@ -1,0 +1,6 @@
+framework module Pods_BirthNote {
+  umbrella header "Pods-BirthNote-umbrella.h"
+
+  export *
+  module * { export * }
+}
